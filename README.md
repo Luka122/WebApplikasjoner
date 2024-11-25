@@ -11,27 +11,29 @@ Update Migrations:
 
 ## Web Application Requirements - Web-based Food Registration Tool
 
-**User experience**, including:
-* Basic design, not plain text and bare buttons  
-* Dynamic content  
-* Friendly navigation  
-* If the user experience is confusing or does not reflect the normal expectation of the given task, it will negatively affect the grade.  
+### User Experience
+- [ ] Basic design, not plain text and bare buttons
+- [ ] Dynamic content
+- [ ] Friendly navigation
+- [ ] User experience is clear and meets normal task expectations
 
-**Coding style and documentation**, including:
-* Neat code, structured, and modularised  
-* Understandable code, either self-explanatory or with suitable comments (in English)  
-* If the program is buggy or has warnings (use `dotnet build` to verify), it will negatively affect the grade.  
+### Coding Style and Documentation
+- [ ] Neat, structured, and modularised code
+- [ ] Code is self-explanatory or has suitable comments (in English)
+- [ ] No warnings or bugs (verified with `dotnet build`)
 
-**Functionality**, including:
-* Database operation with at least 2 types of entity (including views and CRUD)  
-* Repository pattern and DAL  
-* Asynchronous database access  
-* Forms and input validation (server-side)  
-* Error handling and logging (server-side)  
-* Authentication and authorisation (server-side)  
-* Unit testing (server-side), at least 8 tests, including:
-  * The complete positive tests and negative tests for each CRUD method (where testing is meaningful) of 1 entity/table  
-* If the requirements are finished in a low quality or incomplete (e.g., for the requirement error handling and logging, if only part of the code is covered by error handling and logging), it will negatively affect the grades.  
+### Functionality
+- [ ] Database operations with at least 2 types of entity (including views and CRUD)
+- [ ] Repository pattern and Data Access Layer (DAL)
+- [ ] Asynchronous database access
+- [ ] Forms and input validation (server-side)
+- [ ] Error handling and logging (server-side)
+- [ ] Authentication and authorisation (server-side)
+- [ ] Unit testing (server-side), including:
+  - [ ] At least 8 unit tests
+  - [ ] Complete positive tests for CRUD methods of 1 entity/table
+  - [ ] Complete negative tests for CRUD methods of 1 entity/table
+
 
 **Additional Notes**:
 * It will be taken into account in the evaluation if you have a beautiful design, extra rich user experience, and extra functionality (be creative).
