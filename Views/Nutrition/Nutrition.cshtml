@@ -1,4 +1,4 @@
-@model IEnumerable<NutritionModel>
+@model IEnumerable<Exam.Models.NutritionEntry>
 @{
     ViewData["Title"] = "Nutrition";
 }
@@ -6,18 +6,20 @@
 <table>
     <thead>
         <tr>
-            <th>Food Item</th>
-            <th>Calories</th>
-            <th>Protein</th>
-            <th>Fat</th>
-            <th>Carbohydrates</th>
+            <th>Name</th>
+            <th>Food Group</th>
+            <th>Calories (kcal)</th>
+            <th>Protein (g)</th>
+            <th>Fat (g)</th>
+            <th>Carbohydrates (g)</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.FoodItem</td>
+                <td>@item.Name</td>
+                <td>@item.FoodGroup</td>
                 <td>@item.Calories</td>
                 <td>@item.Protein</td>
                 <td>@item.Fat</td>

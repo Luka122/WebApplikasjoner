@@ -4,16 +4,19 @@ using System.Collections.Generic;
 
 public class NutritionController : Controller
 {
+
+    private readonly NutritionEntryDbContext _nutritionContext;
+
+    public NutritionController(NutritionEntryDbContext nutritionContext)
+    {
+        _nutritionContext = nutritionContext;
+    }
+
     public IActionResult Nutrition()
     {
-        // test data
-        var nutritionData = new List<NutritionModel> 
-        {
-            new NutritionModel { FoodItem = "Apple", Calories = 95, Protein = 0.5, Fat = 0.3, Carbohydrates = 25 }, //example 
-            new NutritionModel { FoodItem = "Chicken Breast", Calories = 165, Protein = 31, Fat = 3.6, Carbohydrates = 0 }, //example 
 
-        };
+        List<NutritionEntry> entries = _nutritionContext.Entries.ToList();
 
-        return View(nutritionData);
+        return View(entries);
     }
 }
