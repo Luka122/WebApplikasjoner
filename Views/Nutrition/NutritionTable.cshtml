@@ -29,11 +29,13 @@
                         <td>
                                     <a class="btn btn-secondary"
                                    asp-controller="Nutrition"
-                                   asp-action="">Edit</a>
+                                   asp-action="Update"
+                                   asp-route-id="@item.NutritionId">Edit</a>
 
                                     <a class="btn btn-danger"
                                     asp-controller="Nutrition"
-                                    asp-action="">Delete</a>
+                                    asp-action="Delete"
+                                    asp-route-id="@item.NutritionId">Delete</a>
                         </td>
                     </tr>
                 }

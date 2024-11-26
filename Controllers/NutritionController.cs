@@ -47,4 +47,42 @@ public class NutritionController : Controller
         // Error Response, Not implemented
         return Json(new { success = false, message = "Invalid data." });
     }
+    
+
+    [HttpGet]
+    public IActionResult Delete(int id)
+    {
+        var item = _nutritionContext.Entries.Find(id);
+        if (item == null)
+        {
+            return NotFound();
+        }
+        _nutritionContext.Entries.Remove(item);
+        _nutritionContext.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
+    [HttpGet]
+    public IActionResult Update(int id)
+    {
+        var item = _nutritionContext.Entries.Find(id);
+        if (item == null)
+        {
+            return NotFound();
+        }
+        return View(item);
+    }
+
+    [HttpPost]
+    public IActionResult Update(NutritionEntry entry)
+    {
+        if (ModelState.IsValid)
+        {
+            _nutritionContext.Entries.Update(entry);
+            _nutritionContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        return View(entry);
+    }
+    
 }
