@@ -41,8 +41,81 @@
     </table>
 
     <p>
-        <a class="btn btn-primary"
-           asp-controller="Nutrition"
-           asp-action="Create">Create New Entry</a>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+            Create New Entry
+        </button>
     </p>
+
+    <!-- Create Modal -->
+    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createModalLabel">Create New Nutrition Entry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form asp-action="Create">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="foodGroup" class="form-label">Food Group</label>
+                            <input type="text" class="form-control" id="foodGroup" name="FoodGroup" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="calories" class="form-label">Calories (kcal)</label>
+                            <input type="number" class="form-control" id="calories" name="Calories" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="protein" class="form-label">Protein (g)</label>
+                            <input type="number" class="form-control" id="protein" name="Protein" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fat" class="form-label">Fat (g)</label>
+                            <input type="number" class="form-control" id="fat" name="Fat" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="carbohydrates" class="form-label">Carbohydrates (g)</label>
+                            <input type="number" class="form-control" id="carbohydrates" name="Carbohydrates" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#createForm').submit(function (event) {
+            event.preventDefault();
+
+            $.ajax({
+                url: '/Nutrition/Create',
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function (response) {
+                    if (response.success) {
+                        console.log(response.message);
+                        $('#createModal').modal('hide');
+                        alert('Entry created successfully!');
+                    } else {
+                        console.log(response.message);
+                        alert('Error: ' + response.message);
+                    }
+                },
+                error: function () {
+                    console.log('An error occurred.');
+                    alert('Error submitting the form.');
+                }
+            });
+        });
+    });
+</script>
