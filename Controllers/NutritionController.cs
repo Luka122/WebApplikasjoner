@@ -12,11 +12,11 @@ public class NutritionController : Controller
         _nutritionContext = nutritionContext;
     }
 
-    public IActionResult Nutrition()
+    public IActionResult Index()
     {
 
         List<NutritionEntry> entries = _nutritionContext.Entries.ToList();
 
-        return View(entries);
+        return View("NutritionTable", entries);
     }
 }

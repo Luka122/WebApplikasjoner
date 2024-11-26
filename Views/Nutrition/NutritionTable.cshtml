@@ -1,0 +1,48 @@
+@model IEnumerable<Exam.Models.NutritionEntry>
+@{
+    ViewData["Title"] = "Nutrition Table";
+}
+<div>
+    <h1>@ViewData["Title"]</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Food Group</th>
+                <th>Calories (kcal)</th>
+                <th>Protein (g)</th>
+                <th>Fat (g)</th>
+                <th>Carbohydrates (g)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.FoodGroup</td>
+                        <td>@item.Calories</td>
+                        <td>@item.Protein</td>
+                        <td>@item.Fat</td>
+                        <td>@item.Carbohydrates</td>
+                        <td>
+                                    <a class="btn btn-secondary"
+                                   asp-controller="Nutrition"
+                                   asp-action="">Edit</a>
+
+                                    <a class="btn btn-danger"
+                                    asp-controller="Nutrition"
+                                    asp-action="">Delete</a>
+                        </td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+
+    <p>
+        <a class="btn btn-primary"
+           asp-controller="Nutrition"
+           asp-action="Create">Create New Entry</a>
+    </p>
+</div>

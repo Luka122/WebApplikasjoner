@@ -4,9 +4,9 @@ namespace Exam.Controllers
 {
     public class HelpController : Controller
     {
-        public IActionResult Help()
+        public IActionResult Index()
         {
-            return View();
+            return View("Help");
         }
     }
 }
