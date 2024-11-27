@@ -3,52 +3,71 @@
     ViewData["Title"] = "Nutrition Table";
 }
 <div>
-    <h1>@ViewData["Title"]</h1>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Food Group</th>
-                <th>Calories (kcal)</th>
-                <th>Protein (g)</th>
-                <th>Fat (g)</th>
-                <th>Carbohydrates (g)</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>@item.Name</td>
-                        <td>@item.FoodGroup</td>
-                        <td>@item.Calories</td>
-                        <td>@item.Protein</td>
-                        <td>@item.Fat</td>
-                        <td>@item.Carbohydrates</td>
-                        <td>
-                                    <a class="btn btn-secondary"
-                                   asp-controller="Nutrition"
-                                   asp-action="Update"
-                                   asp-route-id="@item.NutritionId">Edit</a>
-
-                                    <a class="btn btn-danger"
-                                    asp-controller="Nutrition"
-                                    asp-action="Delete"
-                                    asp-route-id="@item.NutritionId">Delete</a>
-                        </td>
-                    </tr>
-                }
-        </tbody>
-    </table>
-
-    <p>
+    <h1 style="padding-left: 4.8%">@ViewData["Title"]</h1>
+    <p style="padding-left: 4.8%">
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
             Create New Entry
         </button>
     </p>
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 mb-3"> <!-- Ensure each box takes half the width on medium screens -->
+                    <div class="card" style="border: 1px solid #ccc; padding: 15px;">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>@item.Name, @item.FoodGroup</h5>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <a class="btn btn-secondary btn-sm"
+                                   asp-controller="Nutrition"
+                                   asp-action="Update"
+                                   asp-route-id="@item.NutritionId">Edit</a>
+                                <a class="btn btn-danger btn-sm"
+                                   asp-controller="Nutrition"
+                                   asp-action="Delete"
+                                   asp-route-id="@item.NutritionId">Delete</a>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <!-- attributes and values -->
+                            <div class="col-md-8">
+                                <div class="d-flex flex-column">
+                                    <div class="d-flex mb-2">
+                                        <p style="margin-bottom: 0; width: 50%;"><strong>Carbohydrates (g):</strong></p>
+                                        <p style="margin-bottom: 0; max-width: 50%;">@item.Carbohydrates</p>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <p style="margin-bottom: 0; width: 50%;"><strong>Calories (kcal):</strong></p>
+                                        <p style="margin-bottom: 0; max-width: 50%;">@item.Calories</p>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <p style="margin-bottom: 0; width: 50%;"><strong>Protein (g):</strong></p>
+                                        <p style="margin-bottom: 0; max-width: 50%;">@item.Protein</p>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <p style="margin-bottom: 0; width: 50%;"><strong>Fat (g):</strong></p>
+                                        <p style="margin-bottom: 0; max-width: 50%;">@item.Fat</p>
+                                    </div>
+                                </div>
+                            </div>
 
-    <!-- Create Modal -->
+                            <!-- picture -->
+                            <div class="col-md-4 text-center">
+                                <div style="border: 1px solid #ccc; width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;">
+                                    <span>Picture</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    
+    <!-- create modal -->
     <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
