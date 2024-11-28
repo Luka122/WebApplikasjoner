@@ -13,60 +13,61 @@
         <div class="row">
             @foreach (var item in Model)
             {
-                <div class="col-md-6 mb-3"> <!-- Ensure each box takes half the width on medium screens -->
-                    <div class="card" style="border: 1px solid #ccc; padding: 15px;">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5>@item.Name, @item.FoodGroup</h5>
-                            </div>
-                            <div class="col-md-4 text-end">
-                                <a class="btn btn-secondary btn-sm"
-                                   asp-controller="Nutrition"
-                                   asp-action="Update"
-                                   asp-route-id="@item.NutritionId">Edit</a>
-                                <a class="btn btn-danger btn-sm"
-                                   asp-controller="Nutrition"
-                                   asp-action="Delete"
-                                   asp-route-id="@item.NutritionId">Delete</a>
-                            </div>
-                        </div>
-                        <hr />
-                        <div class="row">
-                            <!-- attributes and values -->
-                            <div class="col-md-8">
-                                <div class="d-flex flex-column">
-                                    <div class="d-flex mb-2">
-                                        <p style="margin-bottom: 0; width: 50%;"><strong>Carbohydrates (g):</strong></p>
-                                        <p style="margin-bottom: 0; max-width: 50%;">@item.Carbohydrates</p>
-                                    </div>
-                                    <div class="d-flex mb-2">
-                                        <p style="margin-bottom: 0; width: 50%;"><strong>Calories (kcal):</strong></p>
-                                        <p style="margin-bottom: 0; max-width: 50%;">@item.Calories</p>
-                                    </div>
-                                    <div class="d-flex mb-2">
-                                        <p style="margin-bottom: 0; width: 50%;"><strong>Protein (g):</strong></p>
-                                        <p style="margin-bottom: 0; max-width: 50%;">@item.Protein</p>
-                                    </div>
-                                    <div class="d-flex mb-2">
-                                        <p style="margin-bottom: 0; width: 50%;"><strong>Fat (g):</strong></p>
-                                        <p style="margin-bottom: 0; max-width: 50%;">@item.Fat</p>
-                                    </div>
+                    <div class="col-md-6 mb-3"> <!-- Ensure each box takes half the width on medium screens -->
+                        <div class="card" style="border: 1px solid #ccc; padding: 15px;">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h5>@item.Name, @item.FoodGroup</h5>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <a class="btn btn-secondary btn-sm"
+                                       asp-controller="Nutrition"
+                                       asp-action="Update"
+                                       asp-route-id="@item.NutritionId">Edit</a>
+
+                                        <form asp-controller="Nutrition" asp-action="Delete" method="post" style="display:inline;">
+                                            <input type="hidden" name="id" value="@item.NutritionId" />
+                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                        </form>
                                 </div>
                             </div>
+                            <hr />
+                            <div class="row">
+                                <!-- attributes and values -->
+                                <div class="col-md-8">
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex mb-2">
+                                            <p style="margin-bottom: 0; width: 50%;"><strong>Carbohydrates (g):</strong></p>
+                                            <p style="margin-bottom: 0; max-width: 50%;">@item.Carbohydrates</p>
+                                        </div>
+                                        <div class="d-flex mb-2">
+                                            <p style="margin-bottom: 0; width: 50%;"><strong>Calories (kcal):</strong></p>
+                                            <p style="margin-bottom: 0; max-width: 50%;">@item.Calories</p>
+                                        </div>
+                                        <div class="d-flex mb-2">
+                                            <p style="margin-bottom: 0; width: 50%;"><strong>Protein (g):</strong></p>
+                                            <p style="margin-bottom: 0; max-width: 50%;">@item.Protein</p>
+                                        </div>
+                                        <div class="d-flex mb-2">
+                                            <p style="margin-bottom: 0; width: 50%;"><strong>Fat (g):</strong></p>
+                                            <p style="margin-bottom: 0; max-width: 50%;">@item.Fat</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <!-- picture -->
-                            <div class="col-md-4 text-center">
-                                <div style="border: 1px solid #ccc; width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;">
-                                    <span>Picture</span>
+                                <!-- picture -->
+                                <div class="col-md-4 text-center">
+                                    <div style="border: 1px solid #ccc; width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;">
+                                        <span>Picture</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             }
         </div>
     </div>
-    
+
     <!-- create modal -->
     <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
         <div class="modal-dialog">

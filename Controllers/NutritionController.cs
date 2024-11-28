@@ -1,19 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using Exam.Models;
 using Exam.DAL;
+using Exam.ViewModels;
 
 public class NutritionController : Controller
 {
     private readonly INutritionRepository _nutritionRepository;
+    private readonly ILogger<NutritionController> _logger;
 
-    public NutritionController(INutritionRepository nutritionRepository)
+    public NutritionController(INutritionRepository nutritionRepository, ILogger<NutritionController> logger)
     {
         _nutritionRepository = nutritionRepository;
+        _logger = logger;
     }
     
     public async Task<IActionResult> Index()
     {
         var entries = await _nutritionRepository.GetAll();
+
         return View("NutritionTable", entries);
     }
     
@@ -32,24 +36,34 @@ public class NutritionController : Controller
                 Carbohydrates = entry.Carbohydrates
             };
 
-            await _nutritionRepository.Create(newEntry);
+            bool returnOk = await _nutritionRepository.Create(newEntry);
 
-            return RedirectToAction("Index");
+            if (returnOk)
+            {
+                return RedirectToAction("Index");
+            }
+
+
         }
 
-        // Error Response, not implemented
-        return Json(new { success = false, message = "Invalid data." });
+        _logger.LogWarning("[NutritionController] Entry creation failed: {@entry}", entry);
+        return RedirectToAction("Index");
     }
     
-    [HttpGet]
+    // TODO: Lecture/Demo has a confirmation as well ? do we need
+    [HttpPost]
     public async Task<IActionResult> Delete(int id)
     {
 
-        bool entryDeleted = await _nutritionRepository.Delete(id);
+        bool returnOk = await _nutritionRepository.Delete(id);
 
-        // Throw error here if failed or something
+        if (returnOk)
+        {
+            return RedirectToAction("Index");
+        }
 
-        return RedirectToAction("Index");
+        _logger.LogWarning("[NutritionController] Entry deletion failed by NutritionId {id}", id);
+        return BadRequest("Entry deletion failed");
     }
 
 
@@ -60,7 +74,8 @@ public class NutritionController : Controller
 
         if (entry == null)
         {
-            return NotFound();
+            _logger.LogError("[NutritionController] Entry not found when updating NutritionId {id}", id);
+            return BadRequest("Item not found for given NutritionId");
         }
 
         return View("Update", entry);
@@ -72,9 +87,14 @@ public class NutritionController : Controller
     {
         if (ModelState.IsValid)
         {
-            await _nutritionRepository.Update(entry);
-            return RedirectToAction("Index");
+            bool returnOk = await _nutritionRepository.Update(entry);
+            if (returnOk)
+            {
+                return RedirectToAction("Index");
+            }
         }
+
+        _logger.LogWarning("[NutritionController] Entry update failed: {@entry}", entry);
         return View(entry);
     }
 }

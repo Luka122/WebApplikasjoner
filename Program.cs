@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Exam.DAL;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,18 @@ builder.Services.AddDbContext<NutritionEntryDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("NutritionConnection")));
 
 builder.Services.AddScoped<INutritionRepository, NutritionRepository>();
+
+// Logging Service
+var loggerConfiguration = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.File($"Logs/Nutri_{DateTime.Now:yyyyMMdd_HHmmss}.log");
+
+loggerConfiguration.Filter.ByExcluding(e => e.Properties.TryGetValue("SourceContext", out var value) &&
+                            e.Level == Serilog.Events.LogEventLevel.Information &&
+                            e.MessageTemplate.Text.Contains("Executed DbCommand"));
+
+var logger = loggerConfiguration.CreateLogger();
+builder.Logging.AddSerilog(logger);
 
 var app = builder.Build();
 
