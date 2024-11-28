@@ -1,7 +1,121 @@
 @{
     ViewData["Title"] = "Index";
+    
 }
 
-<div>
-    <h1>Home Page</h1>
+<div class="container my-5">
+    <div class="row align-items-start">
+        <!-- Text Section (Left) -->
+        <div class="col-md-6">
+            <!-- Welcome Section -->
+            <div class="mb-4">
+                <h1 class="mb-3">Welcome to Our Nutrition Page</h1>
+                <p class="lead">
+                    Your one-stop solution for nutritional information and healthy eating! Explore our tools and features to lead a healthier lifestyle.
+                </p>
+            </div>
+
+            <!-- Why Us paragraph -->
+            <div>
+                <h2>Why Choose Us?</h2>
+                <p class="text-muted">
+                    We provide accurate nutritional information to help you make better choices for a healthier lifestyle. 
+                    Whether you're looking for inspiration or share new meal ideas, our platform offers everything you need to reach your health goals. 
+                    Choose us for a comprehensive, user-friendly experience that empowers you to live a healthier life.
+                </p>
+            </div>
+        </div>
+        
+
+        
+        <div class="col-md-6">
+    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" aria-label="home site Carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="https://cdn.nba.com/headshots/nba/latest/260x190/1626174.png" class="d-block w-100" alt="fyll inn" loading="lazy">
+                <!-- endre bilder-->
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ5KoO75KGf8UBGojxb8WpIH-jyZGmlBkUHA&s" class="d-block w-100" alt="fyll inn" loading="lazy">
+                <!-- endre bilder-->
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="https://i.scdn.co/image/ab67616d00001e02ba602db882ab3c0839b7051f" class="d-block w-100" alt="fyll inn" loading="lazy">
+                <!-- endre bilder-->
+            </div>
+        </div>
+
+        <!-- Carousel controll -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev" aria-label="Previous slide">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next" aria-label="Next slide">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+        
+        <!-- Carousel indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+    </div>
 </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- plain footer-->
+<div class="footer">
+    <p> <!--Copyright © 2024 
+    <br>-->
+        Luka-s // Raja-s374957 // Ole-s
+    </p>
+</div>
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding-left: 50px;
+    padding-top: 15px;
+    color: rgb(0, 0, 0);
+    border-top-style: ridge;
+    border-color: rgba(#D3D3D3);
+    text-align: left;
+  }
+ 
+  /* prev and next Color */
+  .carousel-control-prev, .carousel-control-next {
+      background-color: #585858 !important; 
+  }
+  
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+      filter: invert(0);
+       
+  }
+  
+  }
+
+  .carousel-item {
+      position: relative;
+  }
+  
+  .carousel-item img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;/* Makes every image fixed so some images aren't bigger or longer than others*/
+      object-fit: fill; /* mkaes sure image covers area */
+  }
+</style>
