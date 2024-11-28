@@ -1,13 +1,20 @@
 using Microsoft.EntityFrameworkCore;
 using Exam.DAL;
 using Serilog;
+using Microsoft.AspNetCore.Identity;
+using Exam.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<NutritionEntryDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("NutritionConnection")));
+
+// Add Identity services
+builder.Services.AddDefaultIdentity<IdentityUser>()
+    .AddEntityFrameworkStores<NutritionEntryDbContext>();
 
 builder.Services.AddScoped<INutritionRepository, NutritionRepository>();
 
@@ -31,10 +38,11 @@ if (app.Environment.IsDevelopment())
     DBInit.Seed(app);
 }
 
-app.MapDefaultControllerRoute();
+app.UseRouting();
 
-// app.MapControllerRoute(
-//     name: "default",
-//     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseAuthentication();   // Add this line
+app.UseAuthorization();   // Add this line
+
+app.MapDefaultControllerRoute();
 
 app.Run();
