@@ -1,0 +1,55 @@
+﻿@model NutritionEntry
+
+<h1>Create a New Nutrition Entry</h1>
+
+<form asp-action="Create" method="post">
+    
+    <!-- values -->
+    <div class="form-group">
+        <label for="Name" class="form-label">Name:</label>
+        <input type="text" id="Name" name="Name" value="@Model.Name" class="form-control" required/>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="FoodGroup" class="form-label">Food Group:</label>
+        <input type="text" id="FoodGroup" name="FoodGroup" value="@Model.FoodGroup" class="form-control" required/>
+        <span asp-validation-for="FoodGroup" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Calories" class="form-label">Calories:</label>
+        <input type="number" id="Calories" name="Calories" value="@Model.Calories" class="form-control" required/>
+        <span asp-validation-for="Calories" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Protein" class="form-label">Protein (g):</label>
+        <input type="number" step="0.01" id="Protein" name="Protein" value="@Model.Protein" class="form-control" required/>
+        <span asp-validation-for="Protein" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Fat" class="form-label">Fat (g):</label>
+        <input type="number" step="0.01" id="Fat" name="Fat" value="@Model.Fat" class="form-control" required/>
+        <span asp-validation-for="Fat" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Carbohydrates" class="form-label">Carbohydrates (g):</label>
+        <input type="number" step="0.01" id="Carbohydrates" name="Carbohydrates" value="@Model.Carbohydrates" class="form-control" required/>
+        <span asp-validation-for="Carbohydrates" class="text-danger"></span>
+    </div>
+
+    <!-- imageurl needs to be added later -->
+    <!--
+    <div class="form-group">
+        <label for="ImageURL" class="form-label">Image URL:</label>
+        <input type="url" id="ImageURL" name="ImageURL" class="form-control" />
+    </div>
+    -->
+
+    <!-- buttons -->
+    <button type="submit" class="btn btn-primary">Create Entry</button>
+    <a href="@Url.Action("Index", "Nutrition")" class="btn btn-secondary">Cancel</a>
+</form>
