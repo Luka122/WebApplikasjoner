@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Exam.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace Exam.Models
+namespace Exam.DAL
 {
     public class NutritionEntryDbContext : DbContext
     {
-        public NutritionEntryDbContext(DbContextOptions<NutritionEntryDbContext> options) : base(options) 
+        public NutritionEntryDbContext(DbContextOptions<NutritionEntryDbContext> options) : base(options)
         {
             Database.EnsureCreated();
         }

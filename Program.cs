@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Exam.Models;
+using Exam.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +7,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<NutritionEntryDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("NutritionConnection")));
+
+builder.Services.AddScoped<INutritionRepository, NutritionRepository>();
 
 var app = builder.Build();
 

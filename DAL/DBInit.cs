@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Exam.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace Exam.Models;
+namespace Exam.DAL;
 public static class DBInit
 {
     public static void Seed(IApplicationBuilder app)

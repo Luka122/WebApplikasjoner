@@ -1,21 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Exam.Models;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks; 
+using Exam.DAL;
 
 public class NutritionController : Controller
 {
-    private readonly NutritionEntryDbContext _nutritionContext;
+    private readonly INutritionRepository _nutritionRepository;
 
-    public NutritionController(NutritionEntryDbContext nutritionContext)
+    public NutritionController(INutritionRepository nutritionRepository)
     {
-        _nutritionContext = nutritionContext;
+        _nutritionRepository = nutritionRepository;
     }
     
     public async Task<IActionResult> Index()
     {
-        List<NutritionEntry> entries = await _nutritionContext.Entries.ToListAsync();
+        var entries = await _nutritionRepository.GetAll();
         return View("NutritionTable", entries);
     }
     
@@ -34,8 +32,7 @@ public class NutritionController : Controller
                 Carbohydrates = entry.Carbohydrates
             };
 
-            _nutritionContext.Entries.Add(newEntry);
-            await _nutritionContext.SaveChangesAsync(); 
+            await _nutritionRepository.Create(newEntry);
 
             return RedirectToAction("Index");
         }
@@ -47,14 +44,10 @@ public class NutritionController : Controller
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
     {
-        var item = await _nutritionContext.Entries.FindAsync(id);
-        if (item == null)
-        {
-            return NotFound();
-        }
 
-        _nutritionContext.Entries.Remove(item);
-        await _nutritionContext.SaveChangesAsync();
+        bool entryDeleted = await _nutritionRepository.Delete(id);
+
+        // Throw error here if failed or something
 
         return RedirectToAction("Index");
     }
@@ -63,12 +56,14 @@ public class NutritionController : Controller
     [HttpGet]
     public async Task<IActionResult> Update(int id)
     {
-        var item = await _nutritionContext.Entries.FindAsync(id);
-        if (item == null)
+        var entry = await _nutritionRepository.GetById(id);
+
+        if (entry == null)
         {
             return NotFound();
         }
-        return View(item);
+
+        return View("Update", entry);
     }
 
 
@@ -77,8 +72,7 @@ public class NutritionController : Controller
     {
         if (ModelState.IsValid)
         {
-            _nutritionContext.Entries.Update(entry);
-            await _nutritionContext.SaveChangesAsync();
+            await _nutritionRepository.Update(entry);
             return RedirectToAction("Index");
         }
         return View(entry);
