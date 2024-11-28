@@ -21,6 +21,12 @@ public class NutritionController : Controller
         return View("NutritionTable", entries);
     }
     
+    [HttpGet]
+    public IActionResult Create()
+    {
+        return View(new NutritionEntry());
+    }
+    
     [HttpPost]
     public async Task<IActionResult> Create(NutritionEntry entry)
     {

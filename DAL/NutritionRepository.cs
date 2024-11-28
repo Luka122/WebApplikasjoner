@@ -18,7 +18,7 @@ namespace Exam.DAL
         {
             try
             {
-                return await _db.Entries.ToListAsync();
+                return await _db!.Entries.ToListAsync();
             }
             catch (Exception e)
             {
@@ -31,7 +31,7 @@ namespace Exam.DAL
         {
             try
             {
-                return await _db.Entries.FindAsync(id);
+                return await _db!.Entries.FindAsync(id);
             }
             catch (Exception e)
             {
@@ -44,7 +44,7 @@ namespace Exam.DAL
         {
             try
             {
-                _db.Entries.Add(entry);
+                _db!.Entries.Add(entry);
                 await _db.SaveChangesAsync();
                 return true;
             }
@@ -59,7 +59,7 @@ namespace Exam.DAL
         {
             try
             {
-                _db.Entries.Update(entry);
+                _db!.Entries.Update(entry);
                 await _db.SaveChangesAsync();
                 return true;
             }
@@ -74,7 +74,7 @@ namespace Exam.DAL
         {
             try
             {
-                var entry = await _db.Entries.FindAsync(id);
+                var entry = await _db!.Entries.FindAsync(id);
 
                 if (entry == null)
                 {
