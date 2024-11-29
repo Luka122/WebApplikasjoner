@@ -11,6 +11,11 @@ builder.Services.AddDbContext<NutritionEntryDbContext>(options =>
 
 builder.Services.AddScoped<INutritionRepository, NutritionRepository>();
 
+builder.Services.AddDbContext<UserDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("UserConnection")));
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 // Logging Service
 var loggerConfiguration = new LoggerConfiguration()
     .MinimumLevel.Information()

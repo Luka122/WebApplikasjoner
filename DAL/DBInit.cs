@@ -1,32 +1,55 @@
 ﻿using Exam.Models;
-using Microsoft.EntityFrameworkCore;
 
-namespace Exam.DAL;
-public static class DBInit
+namespace Exam.DAL
 {
-    public static void Seed(IApplicationBuilder app)
+    public static class DBInit
     {
-        using var serviceScope = app.ApplicationServices.CreateScope();
-        NutritionEntryDbContext? context = serviceScope.ServiceProvider.GetService<NutritionEntryDbContext>();
-
-        if (context != null)
+        public static void Seed(IApplicationBuilder app)
         {
-            context.Database.EnsureDeleted();
-            context.Database.EnsureCreated();
+            using var serviceScope = app.ApplicationServices.CreateScope();
+            var nutritionContext = serviceScope.ServiceProvider.GetService<NutritionEntryDbContext>();
+            var userContext = serviceScope.ServiceProvider.GetService<UserDbContext>();
 
-            if (!context.Entries.Any())
+            // Seed NutritionEntryDbContext
+            if (nutritionContext != null)
             {
-                var entries = new List<NutritionEntry>
-                {
-                    new NutritionEntry { NutritionId = 1, Name = "Apple", FoodGroup = "Fruits", Calories = 95, Protein = 0.5, Fat = 0.3, Carbohydrates = 25 },
-                    new NutritionEntry { NutritionId = 2, Name = "Chicken Breast", FoodGroup = "Meats", Calories = 165, Protein = 31, Fat = 3.6, Carbohydrates = 0 },
-                    new NutritionEntry { NutritionId = 3, Name = "Broccoli", FoodGroup = "Vegetables", Calories = 55, Protein = 4.0, Fat = 0.6, Carbohydrates = 11 },
-                    new NutritionEntry { NutritionId = 4, Name = "Rice", FoodGroup = "Grains", Calories = 206, Protein = 4.3, Fat = 0.4, Carbohydrates = 45 },
-                    new NutritionEntry { NutritionId = 5, Name = "Almonds", FoodGroup = "Nuts", Calories = 164, Protein = 6.0, Fat = 14.0, Carbohydrates = 6 }
-                };
+                nutritionContext.Database.EnsureDeleted();
+                nutritionContext.Database.EnsureCreated();
 
-                context.AddRange(entries);
-                context.SaveChanges();
+                if (!nutritionContext.Entries.Any())
+                {
+                    var entries = new List<NutritionEntry>
+                    {
+                        new NutritionEntry { NutritionId = 1, Name = "Apple", FoodGroup = "Fruits", Calories = 95, Protein = 0.5, Fat = 0.3, Carbohydrates = 25 },
+                        new NutritionEntry { NutritionId = 2, Name = "Chicken Breast", FoodGroup = "Meats", Calories = 165, Protein = 31, Fat = 3.6, Carbohydrates = 0 },
+                        new NutritionEntry { NutritionId = 3, Name = "Broccoli", FoodGroup = "Vegetables", Calories = 55, Protein = 4.0, Fat = 0.6, Carbohydrates = 11 },
+                        new NutritionEntry { NutritionId = 4, Name = "Rice", FoodGroup = "Grains", Calories = 206, Protein = 4.3, Fat = 0.4, Carbohydrates = 45 },
+                        new NutritionEntry { NutritionId = 5, Name = "Almonds", FoodGroup = "Nuts", Calories = 164, Protein = 6.0, Fat = 14.0, Carbohydrates = 6 }
+                    };
+
+                    nutritionContext.AddRange(entries);
+                    nutritionContext.SaveChanges();
+                }
+            }
+
+            // Seed UserDbContext
+            if (userContext != null)
+            {
+                userContext.Database.EnsureDeleted();
+                userContext.Database.EnsureCreated();
+
+                if (!userContext.Users.Any())
+                {
+                    var users = new List<User>
+                    {
+                        new User { UserId = 1, Username = "User1", Password = "Password1" },
+                        new User { UserId = 2, Username = "User2", Password = "Password2" }
+                        // Add more users as needed
+                    };
+
+                    userContext.AddRange(users);
+                    userContext.SaveChanges();
+                }
             }
         }
     }
