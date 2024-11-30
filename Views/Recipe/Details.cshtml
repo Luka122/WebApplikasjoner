@@ -1,0 +1,7 @@
+@model Exam.Models.RecipeEntry
+
+<h2>@Model.Name</h2>
+<p>@Model.Description</p>
+<p>Cooking Time: @Model.CookingTime minutes</p>
+<img src="@Model.ImageURL" alt="@Model.Name" width="300">
+<a class="btn btn-primary" asp-action="Index">Back to List</a>

@@ -1,0 +1,29 @@
+@model IEnumerable<Exam.Models.RecipeEntry>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Recipe ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Cooking Time</th>
+            <th>Ingredients</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recipe in Model)
+        {
+            <tr>
+                <td>@recipe.RecipeId</td>
+                <td>@recipe.Name</td>
+                <td>@recipe.Description</td>
+                <td>@recipe.CookingTime minutes</td>
+                <td>@recipe.Ingredients</td>
+                <td>
+                    <img src="@recipe.ImageURL" alt="@recipe.Name" width="100" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

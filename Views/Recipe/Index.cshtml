@@ -1,0 +1,31 @@
+@model IEnumerable<Exam.Models.RecipeEntry>
+
+<h2>Recipes</h2>
+
+<a class="btn btn-primary" asp-action="Create">Add Recipe</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Cooking Time</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recipe in Model)
+        {
+            <tr>
+                <td>@recipe.Name</td>
+                <td>@recipe.Description</td>
+                <td>@recipe.CookingTime minutes</td>
+                <td>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@recipe.RecipeId">Details</a>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@recipe.RecipeId">Edit</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@recipe.RecipeId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

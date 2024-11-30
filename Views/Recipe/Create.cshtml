@@ -1,0 +1,24 @@
+@model Exam.Models.RecipeEntry
+
+<h2>Create Recipe</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="CookingTime"></label>
+        <input asp-for="CookingTime" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageURL"></label>
+        <input asp-for="ImageURL" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<a class="btn btn-secondary" asp-action="Index">Cancel</a>

@@ -12,6 +12,13 @@ builder.Services.AddDbContext<NutritionEntryDbContext>(options =>
 
 builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<NutritionEntryDbContext>();
 
+builder.Services.AddDbContext<RecipeDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("RecipeConnection")));
+
+
+
+
+
 /*
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 {
@@ -44,6 +51,8 @@ builder.Services.ConfigureApplicationCookie(options =>
 });
 
 builder.Services.AddScoped<INutritionRepository, NutritionRepository>();
+
+builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 
 builder.Services.AddRazorPages();
 
