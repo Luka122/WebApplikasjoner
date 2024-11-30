@@ -1,4 +1,6 @@
 ﻿using Exam.Models;
+using static System.Net.Mime.MediaTypeNames;
+using System;
 
 namespace Exam.DAL
 {
@@ -20,11 +22,11 @@ namespace Exam.DAL
                 {
                     var entries = new List<NutritionEntry>
                     {
-                        new NutritionEntry { NutritionId = 1, Name = "Apple", FoodGroup = "Fruits", Calories = 95, Protein = 0.5, Fat = 0.3, Carbohydrates = 25 },
-                        new NutritionEntry { NutritionId = 2, Name = "Chicken Breast", FoodGroup = "Meats", Calories = 165, Protein = 31, Fat = 3.6, Carbohydrates = 0 },
-                        new NutritionEntry { NutritionId = 3, Name = "Broccoli", FoodGroup = "Vegetables", Calories = 55, Protein = 4.0, Fat = 0.6, Carbohydrates = 11 },
-                        new NutritionEntry { NutritionId = 4, Name = "Rice", FoodGroup = "Grains", Calories = 206, Protein = 4.3, Fat = 0.4, Carbohydrates = 45 },
-                        new NutritionEntry { NutritionId = 5, Name = "Almonds", FoodGroup = "Nuts", Calories = 164, Protein = 6.0, Fat = 14.0, Carbohydrates = 6 }
+                        new NutritionEntry { NutritionId = 1, Name = "Apple", FoodGroup = "Fruits", Calories = 95, Protein = 0.5, Fat = 0.3, Carbohydrates = 25, ImageURL = "/images/DbInit/apple.png"},
+                        new NutritionEntry { NutritionId = 2, Name = "Chicken Breast", FoodGroup = "Meats", Calories = 165, Protein = 31, Fat = 3.6, Carbohydrates = 0, ImageURL = "/images/DbInit/chicken.png"},
+                        new NutritionEntry { NutritionId = 3, Name = "Broccoli", FoodGroup = "Vegetables", Calories = 55, Protein = 4.0, Fat = 0.6, Carbohydrates = 11, ImageURL = "/images/DbInit/broccoli.png"},
+                        new NutritionEntry { NutritionId = 4, Name = "Rice", FoodGroup = "Grains", Calories = 206, Protein = 4.3, Fat = 0.4, Carbohydrates = 45, ImageURL = "/images/DbInit/rice.png"},
+                        new NutritionEntry { NutritionId = 5, Name = "Almonds", FoodGroup = "Nuts", Calories = 164, Protein = 6.0, Fat = 14.0, Carbohydrates = 6, ImageURL = "/images/DbInit/almonds.png"}
                     };
 
                     nutritionContext.AddRange(entries);
@@ -44,7 +46,6 @@ namespace Exam.DAL
                     {
                         new User { UserId = 1, Username = "User1", Password = "Password1" },
                         new User { UserId = 2, Username = "User2", Password = "Password2" }
-                        // Add more users as needed
                     };
 
                     userContext.AddRange(users);

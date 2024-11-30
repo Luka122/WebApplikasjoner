@@ -41,13 +41,11 @@
         <span asp-validation-for="Carbohydrates" class="text-danger"></span>
     </div>
 
-    <!-- imageurl needs to be added later -->
-    <!--
     <div class="form-group">
         <label for="ImageURL" class="form-label">Image URL:</label>
-        <input type="url" id="ImageURL" name="ImageURL" class="form-control" />
+        <input type="text" id="ImageURL" name="ImageURL" value="@Model.ImageURL" class="form-control" required/>
+        <span asp-validation-for="ImageURL" class="text-danger"></span>
     </div>
-    -->
 
     <!-- buttons -->
     <button type="submit" class="btn btn-primary">Create Entry</button>

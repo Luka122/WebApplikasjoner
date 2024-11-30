@@ -16,5 +16,8 @@ namespace Exam.Models
         public double Protein { get; set; }
         public double Fat { get; set; }
         public double Carbohydrates { get; set; }
+
+        [StringLength(200)]
+        public string? ImageURL { get; set; } = string.Empty;
     }
 }

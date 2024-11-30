@@ -41,10 +41,10 @@
         <span asp-validation-for="Carbohydrates" class="text-danger"></span>
     </div>
 
-    <!-- not implemented yet -->
     <div class="form-group">
-        <label for="Picture">Picture</label>
-        <input type="file" class="form-control" id="Picture" name="Picture" />
+        <label asp-for="ImageURL"></label>
+        <input asp-for="ImageURL" class="form-control" />
+        <span asp-validation-for="ImageURL" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Save</button>

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Exam.Models;
 using Exam.DAL;
 using Exam.ViewModels;
+using Microsoft.Extensions.Logging;
 
 public class NutritionController : Controller
 {
@@ -18,6 +19,11 @@ public class NutritionController : Controller
     {
         var entries = await _nutritionRepository.GetAll();
 
+        foreach (var entry in entries)
+        {
+            _logger.LogWarning("{}: {}", entry.Name, entry.ImageURL);
+        }
+
         return View("NutritionTable", entries);
     }
     
@@ -32,24 +38,12 @@ public class NutritionController : Controller
     {
         if (ModelState.IsValid)
         {
-            var newEntry = new NutritionEntry
-            {
-                Name = entry.Name,
-                FoodGroup = entry.FoodGroup,
-                Calories = entry.Calories,
-                Protein = entry.Protein,
-                Fat = entry.Fat,
-                Carbohydrates = entry.Carbohydrates
-            };
-
-            bool returnOk = await _nutritionRepository.Create(newEntry);
+            bool returnOk = await _nutritionRepository.Create(entry);
 
             if (returnOk)
             {
                 return RedirectToAction("Index");
             }
-
-
         }
 
         _logger.LogWarning("[NutritionController] Entry creation failed: {@entry}", entry);

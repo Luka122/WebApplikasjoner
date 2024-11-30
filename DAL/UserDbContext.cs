@@ -20,13 +20,6 @@ namespace Exam.DAL
             modelBuilder.Entity<User>()
                 .Property(u => u.UserId)
                 .ValueGeneratedOnAdd();
-            
-            // Seed data
-            modelBuilder.Entity<User>().HasData(
-                new User { UserId = 1, Username = "User1", Password = "Password1" },
-                new User { UserId = 2, Username = "User2", Password = "Password2" }
-                // Add more users as needed
-            );
         }
     }
 }
