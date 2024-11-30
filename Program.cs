@@ -7,68 +7,23 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+// Register DbContext and Repositories
 builder.Services.AddDbContext<NutritionEntryDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("NutritionConnection")));
-
-builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<NutritionEntryDbContext>();
 
 builder.Services.AddDbContext<RecipeDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("RecipeConnection")));
 
 
+// Register Identity Services
+builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<NutritionEntryDbContext>();
 
-
-
-/*
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
-{
-    // Password settings
-    options.Password.RequireDigit = true;
-    options.Password.RequiredLength = 8;
-    options.Password.RequireNonAlphanumeric = true;
-    options.Password.RequireUppercase = true;
-    options.Password.RequireLowercase = true;
-    options.Password.RequiredUniqueChars = 6;
-
-    // Lockout settings
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(60);
-    options.Lockout.MaxFailedAccessAttempts = 5;
-    options.Lockout.AllowedForNewUsers = true;
-
-    // User Settings
-    options.User.RequireUniqueEmail = true;
-
-    // Sign-in settings
-    options.SignIn.RequireConfirmedAccount = false;
-})
-    .AddEntityFrameworkStores<NutritionEntryDbContext>()
-    .AddDefaultTokenProviders();
-*/
-
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    options.LoginPath = "/Identity/Account/Login";
-});
-
+// Register Repositories
 builder.Services.AddScoped<INutritionRepository, NutritionRepository>();
-
 builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 
-builder.Services.AddRazorPages();
 
-builder.Services.AddSession(options =>
-{
-    options.Cookie.Name = ".Nutri.Session";
-    options.IdleTimeout = TimeSpan.FromSeconds(1800);
-    options.Cookie.IsEssential = true;
-});
-
-builder.Services.AddDbContext<UserDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("UserConnection")));
-
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-
-// Logging Service
+// Configure Logging using Serilog
 var loggerConfiguration = new LoggerConfiguration()
     .MinimumLevel.Information()
     .WriteTo.File($"Logs/Nutri_{DateTime.Now:yyyyMMdd_HHmmss}.log");
@@ -80,6 +35,22 @@ loggerConfiguration.Filter.ByExcluding(e => e.Properties.TryGetValue("SourceCont
 var logger = loggerConfiguration.CreateLogger();
 builder.Logging.AddSerilog(logger);
 
+// Configure Application Cookie
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Identity/Account/Login";
+});
+
+// Register Razor Pages and Session
+builder.Services.AddRazorPages();
+
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = ".Nutri.Session";
+    options.IdleTimeout = TimeSpan.FromSeconds(1800);
+    options.Cookie.IsEssential = true;
+});
+
 var app = builder.Build();
 
 app.UseStaticFiles();
@@ -88,7 +59,6 @@ app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 
-
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -96,6 +66,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapDefaultControllerRoute();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();

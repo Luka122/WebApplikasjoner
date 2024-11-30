@@ -1,86 +1,166 @@
 using Microsoft.AspNetCore.Mvc;
 using Exam.DAL;
 using Exam.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 
 namespace Exam.Controllers
 {
+    [Authorize]
     public class RecipeController : Controller
     {
         private readonly IRecipeRepository _recipeRepository;
+        private readonly ILogger<RecipeController> _logger;
 
-        public RecipeController(IRecipeRepository recipeRepository)
+        public RecipeController(IRecipeRepository recipeRepository, ILogger<RecipeController> logger)
         {
             _recipeRepository = recipeRepository;
+            _logger = logger;
         }
 
-        public IActionResult Index()
+        // GET: Recipe/Index
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> Index()
         {
-            var recipes = _recipeRepository.GetAllRecipes();
-            return View(recipes);
+            try
+            {
+                var recipes = await _recipeRepository.GetAllRecipesAsync();
+                return View(recipes);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching the recipes.");
+                TempData["ErrorMessage"] = "Unable to fetch recipes. Please try again later.";
+                return View("Error");
+            }
         }
 
-        public IActionResult Details(int id)
-        {
-            var recipe = _recipeRepository.GetRecipeById(id);
-            if (recipe == null)
-                return NotFound();
-            return View(recipe);
-        }
-
+        // GET: Recipe/Create
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
+        // POST: Recipe/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(RecipeEntry recipe)
+        public async Task<IActionResult> Create(RecipeEntry recipeEntry)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _recipeRepository.AddRecipe(recipe);
-                _recipeRepository.Save();
-                return RedirectToAction(nameof(Index));
+                return View(recipeEntry);
+            }
+
+            try
+            {
+                await _recipeRepository.AddRecipeAsync(recipeEntry);
+                TempData["SuccessMessage"] = "Recipe added successfully.";
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while adding the recipe.");
+                ModelState.AddModelError("", "An unexpected error occurred. Please try again later.");
+                return View(recipeEntry);
+            }
+        }
+
+        // GET: Recipe/Edit/5
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var recipe = await _recipeRepository.GetRecipeByIdAsync(id);
+            if (recipe == null)
+            {
+                return NotFound();
             }
             return View(recipe);
         }
 
-        public IActionResult Edit(int id)
-        {
-            var recipe = _recipeRepository.GetRecipeById(id);
-            if (recipe == null)
-                return NotFound();
-            return View(recipe);
-        }
-
+        // POST: Recipe/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(RecipeEntry recipe)
+        public async Task<IActionResult> Edit(RecipeEntry recipeEntry)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _recipeRepository.UpdateRecipe(recipe);
-                _recipeRepository.Save();
-                return RedirectToAction(nameof(Index));
+                return View(recipeEntry);
+            }
+
+            try
+            {
+                await _recipeRepository.UpdateRecipeAsync(recipeEntry);
+                TempData["SuccessMessage"] = "Recipe updated successfully.";
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while updating the recipe.");
+                ModelState.AddModelError("", "An unexpected error occurred. Please try again later.");
+                return View(recipeEntry);
+            }
+        }
+
+        // GET: Recipe/Delete/5
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var recipe = await _recipeRepository.GetRecipeByIdAsync(id);
+            if (recipe == null)
+            {
+                return NotFound();
             }
             return View(recipe);
         }
 
-        public IActionResult Delete(int id)
+            [HttpPost, ActionName("Delete")]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> DeleteConfirmed(int id)
+{
+    try
+    {
+        await _recipeRepository.DeleteRecipeAsync(id);
+        TempData["SuccessMessage"] = "Recipe deleted successfully.";
+        return RedirectToAction("Index");
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "An error occurred while deleting the recipe.");
+        TempData["ErrorMessage"] = "An unexpected error occurred. Please try again later.";
+        var recipe = await _recipeRepository.GetRecipeByIdAsync(id);
+        if (recipe == null)
         {
-            var recipe = _recipeRepository.GetRecipeById(id);
-            if (recipe == null)
-                return NotFound();
-            return View(recipe);
+            return NotFound();
         }
+        return View("Delete", recipe); // Return to the same Delete view if there was an error.
+    }
+}
+// GET: Recipe/Details/5
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> Details(int id)
+        {
+            try
+            {
+                var recipe = await _recipeRepository.GetRecipeByIdAsync(id);
+                if (recipe == null)
+                {
+                    return NotFound();
+                }
+                return View(recipe);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching the recipe details.");
+                TempData["ErrorMessage"] = "Unable to fetch recipe details. Please try again later.";
+                return View("Error");
+            }
+}
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            _recipeRepository.DeleteRecipe(id);
-            _recipeRepository.Save();
-            return RedirectToAction(nameof(Index));
-        }
+
+
     }
 }

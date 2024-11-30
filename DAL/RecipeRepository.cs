@@ -1,50 +1,100 @@
-using System.Collections.Generic;
-using System.Linq;
 using Exam.Models;
+using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Exam.DAL
 {
     public class RecipeRepository : IRecipeRepository
     {
         private readonly RecipeDbContext _context;
+        private readonly ILogger<RecipeRepository> _logger;
 
-        public RecipeRepository(RecipeDbContext context)
+        public RecipeRepository(RecipeDbContext context, ILogger<RecipeRepository> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
-        public IEnumerable<RecipeEntry> GetAllRecipes()
+        public async Task<IEnumerable<RecipeEntry>> GetAllRecipesAsync()
         {
-            return _context.Recipes.ToList();
-        }
-
-        public RecipeEntry? GetRecipeById(int id)
-        {
-            return _context.Recipes.FirstOrDefault(r => r.RecipeId == id);
-        }
-
-        public void AddRecipe(RecipeEntry recipe)
-        {
-            _context.Recipes.Add(recipe);
-        }
-
-        public void UpdateRecipe(RecipeEntry recipe)
-        {
-            _context.Recipes.Update(recipe);
-        }
-
-        public void DeleteRecipe(int id)
-        {
-            var recipe = GetRecipeById(id);
-            if (recipe != null)
+            try
             {
-                _context.Recipes.Remove(recipe);
+                return await _context.Recipes.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching all recipes");
+                throw;
             }
         }
 
-        public void Save()
+        public async Task<RecipeEntry> GetRecipeByIdAsync(int id)
         {
-            _context.SaveChanges();
+            try
+            {
+                return await _context.Recipes.FindAsync(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error occurred while fetching recipe with ID: {id}");
+                throw;
+            }
+        }
+
+        public async Task AddRecipeAsync(RecipeEntry recipeEntry)
+        {
+            try
+            {
+                await _context.Recipes.AddAsync(recipeEntry);
+                await _context.SaveChangesAsync();
+                _logger.LogInformation($"Recipe '{recipeEntry.Name}' added successfully.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while adding a recipe");
+                throw;
+            }
+        }
+
+        public async Task UpdateRecipeAsync(RecipeEntry recipeEntry)
+        {
+            try
+            {
+                _context.Recipes.Update(recipeEntry);
+                await _context.SaveChangesAsync();
+                _logger.LogInformation($"Recipe with ID {recipeEntry.RecipeId} updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error occurred while updating recipe with ID: {recipeEntry.RecipeId}");
+                throw;
+            }
+        }
+
+        public async Task DeleteRecipeAsync(int id)
+        {
+            try
+            {
+                var recipe = await _context.Recipes.FindAsync(id);
+                if (recipe != null)
+                {
+                    _context.Recipes.Remove(recipe);
+                    await _context.SaveChangesAsync();
+                    _logger.LogInformation($"Recipe with ID {id} deleted successfully.");
+                }
+                else
+                {
+                    _logger.LogWarning($"Recipe with ID {id} was not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error occurred while deleting recipe with ID: {id}");
+                throw;
+            }
         }
     }
 }
