@@ -14,7 +14,6 @@ namespace Exam.DAL
         {
             using var serviceScope = app.ApplicationServices.CreateScope();
             var nutritionContext = serviceScope.ServiceProvider.GetService<NutritionEntryDbContext>();
-            var userContext = serviceScope.ServiceProvider.GetService<UserDbContext>();
 
             // Seed NutritionEntryDbContext
             if (nutritionContext != null)
@@ -35,25 +34,6 @@ namespace Exam.DAL
 
                     nutritionContext.AddRange(entries);
                     nutritionContext.SaveChanges();
-                }
-            }
-
-            // Seed UserDbContext
-            if (userContext != null)
-            {
-                userContext.Database.EnsureDeleted();
-                userContext.Database.EnsureCreated();
-
-                if (!userContext.Users.Any())
-                {
-                    var users = new List<User>
-                    {
-                        new User { UserId = 1, Username = "User1", Password = "Password1" },
-                        new User { UserId = 2, Username = "User2", Password = "Password2" }
-                    };
-
-                    userContext.AddRange(users);
-                    userContext.SaveChanges();
                 }
             }
 

@@ -54,11 +54,6 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-builder.Services.AddDbContext<UserDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("UserConnection")));
-
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-
 // Logging Service
 var loggerConfiguration = new LoggerConfiguration()
     .MinimumLevel.Information()
