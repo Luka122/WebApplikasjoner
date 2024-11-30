@@ -1,6 +1,10 @@
 ﻿using Exam.Models;
-using static System.Net.Mime.MediaTypeNames;
-using System;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace Exam.DAL
 {
@@ -50,6 +54,27 @@ namespace Exam.DAL
 
                     userContext.AddRange(users);
                     userContext.SaveChanges();
+                }
+            }
+
+            var userManager = serviceScope.ServiceProvider.GetService<UserManager<IdentityUser>>();
+
+            if (userManager != null)
+            {
+                const string email = "admin@test.com";
+                const string username = "admin@test.com";
+                const string password = "Test123456.";
+
+                var defaultUser = userManager.FindByEmailAsync(email).Result;
+                if (defaultUser == null)
+                {
+                    var newUser = new IdentityUser
+                    {
+                        UserName = username,
+                        Email = email,
+                    };
+
+                    var result = userManager.CreateAsync(newUser, password).Result;
                 }
             }
         }

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Exam.Models;
 using Exam.DAL;
@@ -19,21 +20,18 @@ public class NutritionController : Controller
     {
         var entries = await _nutritionRepository.GetAll();
 
-        foreach (var entry in entries)
-        {
-            _logger.LogWarning("{}: {}", entry.Name, entry.ImageURL);
-        }
-
         return View("NutritionTable", entries);
     }
     
     [HttpGet]
+    [Authorize]
     public IActionResult Create()
     {
         return View(new NutritionEntry());
     }
     
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> Create(NutritionEntry entry)
     {
         if (ModelState.IsValid)
@@ -52,6 +50,7 @@ public class NutritionController : Controller
     
     // TODO: Lecture/Demo has a confirmation as well ? do we need
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> Delete(int id)
     {
 
@@ -68,6 +67,7 @@ public class NutritionController : Controller
 
 
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> Update(int id)
     {
         var entry = await _nutritionRepository.GetById(id);
@@ -83,6 +83,7 @@ public class NutritionController : Controller
 
 
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> Update(NutritionEntry entry)
     {
         if (ModelState.IsValid)

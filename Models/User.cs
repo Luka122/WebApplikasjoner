@@ -1,3 +1,5 @@
+using System.Diagnostics.Metrics;
+
 namespace Exam.Models
 {
     public class User

@@ -1,9 +1,10 @@
 ﻿using Exam.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Exam.DAL
 {
-    public class NutritionEntryDbContext : DbContext
+    public class NutritionEntryDbContext : IdentityDbContext
     {
         public NutritionEntryDbContext(DbContextOptions<NutritionEntryDbContext> options) : base(options)
         {
@@ -14,6 +15,8 @@ namespace Exam.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<NutritionEntry>()
                 .HasKey(n => n.NutritionId);
 
