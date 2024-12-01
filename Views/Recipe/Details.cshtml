@@ -4,30 +4,29 @@
     ViewData["Title"] = "Recipe Details";
 }
 
-<h2>Recipe Details</h2>
-
-<div class="card">
-    <div class="card-header">
-        @Model.Name
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Description</h5>
-        <p class="card-text">@Model.Description</p>
-
-        <h5 class="card-title">Cooking Time</h5>
-        <p class="card-text">@Model.CookingTime minutes</p>
-
-        <h5 class="card-title">Ingredients</h5>
-        <p class="card-text">@Model.Ingredients</p>
-
+<div class="container">
+    <div class="card my-5">
+        <div class="card-header text-center">
+            <h3>@Model.Name</h3>
+        </div>
         @if (!string.IsNullOrEmpty(Model.ImageURL))
         {
-            <img src="@Model.ImageURL" alt="@Model.Name" class="img-thumbnail" />
+            <img src="@Model.ImageURL" class="card-img-top" alt="@Model.Name">
         }
-    </div>
-    <div class="card-footer">
-        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-        <a asp-action="Edit" asp-route-id="@Model.RecipeId" class="btn btn-primary">Edit</a>
-        <a asp-action="Delete" asp-route-id="@Model.RecipeId" class="btn btn-danger">Delete</a>
+        <div class="card-body">
+            <h5 class="card-title">Description</h5>
+            <p class="card-text">@Model.Description</p>
+
+            <h5 class="card-title">Cooking Time</h5>
+            <span class="badge bg-primary">@Model.CookingTime minutes</span>
+
+            <h5 class="card-title mt-4">Ingredients</h5>
+            <p class="card-text">@Model.Ingredients</p>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            <a asp-action="Edit" asp-route-id="@Model.RecipeId" class="btn btn-primary mx-1">Edit</a>
+            <a asp-action="Delete" asp-route-id="@Model.RecipeId" class="btn btn-danger mx-1">Delete</a>
+        </div>
     </div>
 </div>
