@@ -51,9 +51,9 @@ namespace Exam.DAL
                 {
                     var recipes = new List<RecipeEntry>
                     {
-                        new RecipeEntry { RecipeId = 1, Name = "Spaghetti Bolognese", Description = "A classic Italian pasta dish with meat sauce.", CookingTime = 30, ImageURL = "/images/DbInit/spaghetti.png" },
-                        new RecipeEntry { RecipeId = 2, Name = "Caesar Salad", Description = "A healthy green salad with creamy Caesar dressing.", CookingTime = 15, ImageURL = "/images/DbInit/caesar.png" },
-                        new RecipeEntry { RecipeId = 3, Name = "Grilled Chicken", Description = "Juicy grilled chicken with herbs.", CookingTime = 25, ImageURL = "/images/DbInit/chicken.png" }
+                        new RecipeEntry { RecipeId = 1, Name = "Spaghetti Bolognese", Description = "Ingredients Spaghetti: 400 grams (for 4 servings)Olive Oil: 2 tablespoonsGarlic: 3 cloves, minced Canned Crushed Tomatoes: 800 grams (or fresh tomatoes, chopped)Tomato Paste: 2 tablespoonsBasil Leaves: 8-10 leaves (or 1 teaspoon dried basil)Oregano: 1 teaspoon (optional)Sugar: 1 teaspoon (balances the acidity)Salt: To tasteBlack Pepper: To taste Parmesan Cheese: Grated (for serving) Water: For boiling pasta", CookingTime = 30, ImageURL = "/images/spaghetti.jpg" },
+                        new RecipeEntry { RecipeId = 2, Name = "Caesar Salad", Description = "A healthy green salad with creamy Caesar dressing.", CookingTime = 15, ImageURL = "/images/sallad.jpg" },
+                        new RecipeEntry { RecipeId = 3, Name = "Grilled Chicken", Description = "Juicy grilled chicken with herbs.", CookingTime = 25, ImageURL = "/images/chicken-dinner.jpg" }
                     };
 
                     recipeContext.AddRange(recipes);
