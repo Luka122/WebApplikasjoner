@@ -51,9 +51,10 @@ namespace Exam.DAL
                 {
                     var recipes = new List<RecipeEntry>
                     {
-                        new RecipeEntry { RecipeId = 1, Name = "Spaghetti Bolognese", Description = "A classic Italian pasta dish with meat sauce.", CookingTime = 30, ImageURL = "/images/DbInit/spaghetti.png" },
-                        new RecipeEntry { RecipeId = 2, Name = "Caesar Salad", Description = "A healthy green salad with creamy Caesar dressing.", CookingTime = 15, ImageURL = "/images/DbInit/caesar.png" },
-                        new RecipeEntry { RecipeId = 3, Name = "Grilled Chicken", Description = "Juicy grilled chicken with herbs.", CookingTime = 25, ImageURL = "/images/DbInit/chicken.png" }
+                        new RecipeEntry { RecipeId = 1, Name = "Spaghetti Bolognese", Description = "A classic Italian pasta dish with a rich and savory meat sauce.", CookingTime = 30, ImageURL = "/images/DbInit/spaghettibolognese.png", Ingredients = "Spaghetti, Ground beef, Tomatoes, Onion, Garlic, Olive oil, Salt, Pepper, Parmesan cheese" },
+                        new RecipeEntry { RecipeId = 2, Name = "Caesar Salad", Description = "A healthy green salad with creamy Caesar dressing and crispy croutons.", CookingTime = 15, ImageURL = "/images/DbInit/caesersalad.png", Ingredients = "Romaine lettuce, Caesar dressing, Croutons, Parmesan cheese, Black pepper" },
+                        new RecipeEntry { RecipeId = 3, Name = "Grilled Chicken", Description = "Juicy grilled chicken breasts seasoned with herbs and spices.", CookingTime = 25, ImageURL = "/images/DbInit/grilledchicken.png", Ingredients = "Chicken breasts, Olive oil, Lemon, Garlic, Rosemary, Salt, Pepper" },
+                        new RecipeEntry { RecipeId = 4, Name = "Vegetable Stir-Fry", Description = "A colorful mix of stir-fried vegetables in a savory soy-based sauce.", CookingTime = 20, ImageURL = "/images/DbInit/vegetablestirfry.png", Ingredients = "Broccoli, Bell peppers, Carrots, Soy sauce, Ginger, Garlic, Olive oil" }
                     };
 
                     recipeContext.AddRange(recipes);
