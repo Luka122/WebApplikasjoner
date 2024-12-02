@@ -1,0 +1,81 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.text-end {
+    text-align: right;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card-footer button {
+    margin-right: 8px;
+}
+
+/* Badge for Cooking Time */
+.badge {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn {
+    font-size: 0.875rem;
+    padding: 8px 12px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border: none;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 150px;
+    }
+}
