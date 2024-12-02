@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 
 namespace Exam.DAL
@@ -14,6 +14,8 @@ namespace Exam.DAL
         {
             using var serviceScope = app.ApplicationServices.CreateScope();
             var nutritionContext = serviceScope.ServiceProvider.GetService<NutritionEntryDbContext>();
+            var recipeContext = serviceScope.ServiceProvider.GetService<RecipeDbContext>();
+            var userManager = serviceScope.ServiceProvider.GetService<UserManager<IdentityUser>>();
 
             // Seed NutritionEntryDbContext
             if (nutritionContext != null)
@@ -37,8 +39,29 @@ namespace Exam.DAL
                 }
             }
 
-            var userManager = serviceScope.ServiceProvider.GetService<UserManager<IdentityUser>>();
+           
 
+            // Seed RecipeDbContext
+            if (recipeContext != null)
+            {
+                recipeContext.Database.EnsureDeleted();
+                recipeContext.Database.EnsureCreated();
+
+                if (!recipeContext.Recipes.Any())
+                {
+                    var recipes = new List<RecipeEntry>
+                    {
+                        new RecipeEntry { RecipeId = 1, Name = "Spaghetti Bolognese", Description = "A classic Italian pasta dish with meat sauce.", CookingTime = 30, ImageURL = "/images/DbInit/spaghetti.png" },
+                        new RecipeEntry { RecipeId = 2, Name = "Caesar Salad", Description = "A healthy green salad with creamy Caesar dressing.", CookingTime = 15, ImageURL = "/images/DbInit/caesar.png" },
+                        new RecipeEntry { RecipeId = 3, Name = "Grilled Chicken", Description = "Juicy grilled chicken with herbs.", CookingTime = 25, ImageURL = "/images/DbInit/chicken.png" }
+                    };
+
+                    recipeContext.AddRange(recipes);
+                    recipeContext.SaveChanges();
+                }
+            }
+
+            // Seed default Identity user
             if (userManager != null)
             {
                 const string email = "admin@test.com";

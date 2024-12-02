@@ -1,0 +1,59 @@
+@model IEnumerable<Exam.Models.RecipeEntry>
+
+@{
+    ViewData["Title"] = "Recipe List";
+}
+
+<div class="container my-4">
+    <h2 class="text-center mb-4">Our Collection of Recipes</h2>
+
+     <div class="text-end mb-4">
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-lg"></i> Add Recipe+
+        </a>
+    </div>
+    
+    <div class="row">
+        @foreach (var recipe in Model)
+        {
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card h-100 shadow-sm">
+                    @if (!string.IsNullOrEmpty(recipe.ImageURL))
+                    {
+                        <img src="@recipe.ImageURL" class="card-img-top" alt="@recipe.Name" style="height: 200px; object-fit: cover;">
+                    }
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center">@recipe.Name</h5>
+                        <p class="card-text">
+                            @{
+                                var description = recipe.Description;
+                                if (!string.IsNullOrEmpty(description) && description.Length > 100)
+                                {
+                                    @description.Substring(0, 100) @("...")
+                                }
+                                else
+                                {
+                                    @description
+                                }
+                            }
+                        </p>
+                        <div class="mt-auto">
+                            <span class="badge bg-primary">@recipe.CookingTime min</span>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a asp-action="Details" asp-route-id="@recipe.RecipeId" class="btn btn-info btn-sm mx-1">
+                            <i class="bi bi-eye"></i> View
+                        </a>
+                        <a asp-action="Edit" asp-route-id="@recipe.RecipeId" class="btn btn-warning btn-sm mx-1">
+                            <i class="bi bi-pencil"></i> Edit
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@recipe.RecipeId" class="btn btn-danger btn-sm mx-1">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

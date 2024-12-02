@@ -1,0 +1,41 @@
+@model IEnumerable<Exam.Models.RecipeEntry>
+
+@{
+    ViewData["Title"] = "Recipes";
+}
+
+<div class="container">
+    <h1 class="my-4 text-center">Our Delicious Recipes</h1>
+
+    <div class="row">
+        @foreach (var recipe in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    @if (!string.IsNullOrEmpty(recipe.ImageURL))
+                    {
+                        <img src="@recipe.ImageURL" class="card-img-top" alt="@recipe.Name">
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@recipe.Name</h5>
+                        <p class="card-text">@recipe.Description</p>
+                        <span class="badge bg-primary">@recipe.CookingTime min</span>
+                        <h6 class="mt-3">Ingredients:</h6>
+                        <p class="card-text">@recipe.Ingredients</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a asp-action="Details" asp-route-id="@recipe.RecipeId" class="btn btn-info btn-sm mx-1">
+                            <i class="bi bi-eye"></i> View
+                        </a>
+                        <a asp-action="Edit" asp-route-id="@recipe.RecipeId" class="btn btn-primary btn-sm mx-1">
+                            <i class="bi bi-pencil"></i> Edit
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@recipe.RecipeId" class="btn btn-danger btn-sm mx-1">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

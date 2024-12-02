@@ -1,0 +1,40 @@
+@model Exam.Models.RecipeEntry
+
+@{
+    ViewData["Title"] = "Add/Edit Recipe";
+}
+
+<div class="container">
+    <h2 class="my-4 text-center">@ViewData["Title"]</h2>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" placeholder="Enter recipe name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label"></label>
+            <textarea asp-for="Description" class="form-control" rows="3" placeholder="Enter description of the recipe"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="CookingTime" class="form-label"></label>
+            <input asp-for="CookingTime" type="number" class="form-control" placeholder="Enter cooking time in minutes" />
+            <span asp-validation-for="CookingTime" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Ingredients" class="form-label"></label>
+            <textarea asp-for="Ingredients" class="form-control" rows="3" placeholder="Enter ingredients, separated by commas"></textarea>
+            <span asp-validation-for="Ingredients" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ImageURL" class="form-label"></label>
+            <input asp-for="ImageURL" class="form-control" placeholder="Optional: Enter an image URL for the recipe" />
+            <span asp-validation-for="ImageURL" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-3">Save Recipe</button>
+        <a asp-action="Index" class="btn btn-secondary mt-3">Cancel</a>
+    </form>
+</div>

@@ -7,43 +7,25 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+// Register DbContext and Repositories
 builder.Services.AddDbContext<NutritionEntryDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("NutritionConnection")));
 
+builder.Services.AddDbContext<RecipeDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("RecipeConnection")));
+
+
+// Register Identity Services
 builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<NutritionEntryDbContext>();
-
-/*
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
-{
-    // Password settings
-    options.Password.RequireDigit = true;
-    options.Password.RequiredLength = 8;
-    options.Password.RequireNonAlphanumeric = true;
-    options.Password.RequireUppercase = true;
-    options.Password.RequireLowercase = true;
-    options.Password.RequiredUniqueChars = 6;
-
-    // Lockout settings
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(60);
-    options.Lockout.MaxFailedAccessAttempts = 5;
-    options.Lockout.AllowedForNewUsers = true;
-
-    // User Settings
-    options.User.RequireUniqueEmail = true;
-
-    // Sign-in settings
-    options.SignIn.RequireConfirmedAccount = false;
-})
-    .AddEntityFrameworkStores<NutritionEntryDbContext>()
-    .AddDefaultTokenProviders();
-*/
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Identity/Account/Login";
 });
 
+// Register Repositories
 builder.Services.AddScoped<INutritionRepository, NutritionRepository>();
+builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 
 builder.Services.AddRazorPages();
 
@@ -54,7 +36,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// Logging Service
+// Configure Logging using Serilog
 var loggerConfiguration = new LoggerConfiguration()
     .MinimumLevel.Information()
     .WriteTo.File($"Logs/Nutri_{DateTime.Now:yyyyMMdd_HHmmss}.log");
@@ -73,7 +55,6 @@ app.UseStaticFiles();
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
-
 
 if (app.Environment.IsDevelopment())
 {
