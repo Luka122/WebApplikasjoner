@@ -1,0 +1,13 @@
+2024-12-02 09:50:27.707 +01:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-02 09:50:27.737 +01:00 [INF] Now listening on: https://localhost:7068
+2024-12-02 09:50:27.738 +01:00 [INF] Now listening on: http://localhost:5029
+2024-12-02 09:50:27.742 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-02 09:50:27.743 +01:00 [INF] Hosting environment: Development
+2024-12-02 09:50:27.744 +01:00 [INF] Content root path: C:\Users\dorde\Documents\Gamle filer\OsloMet - Informasjonsteknologi\ITPE3200_WebApplikasjoner\Nutri_REACT_2\api
+2024-12-02 09:50:30.729 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 09:50:30.754 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 26.736ms
+2024-12-02 09:50:30.757 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
+2024-12-02 09:50:33.299 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/swagger/index.html - null null
+2024-12-02 09:50:33.352 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/swagger/index.html - 200 null text/html;charset=utf-8 52.9721ms
+2024-12-02 09:50:33.503 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/swagger/v1/swagger.json - null null
+2024-12-02 09:50:33.534 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.35ms

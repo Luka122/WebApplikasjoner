@@ -1,0 +1,37 @@
+2024-12-02 10:25:48.149 +01:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-02 10:25:48.183 +01:00 [INF] Now listening on: https://localhost:7068
+2024-12-02 10:25:48.184 +01:00 [INF] Now listening on: http://localhost:5029
+2024-12-02 10:25:48.189 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-02 10:25:48.194 +01:00 [INF] Hosting environment: Development
+2024-12-02 10:25:48.196 +01:00 [INF] Content root path: C:\Users\dorde\Documents\Gamle filer\OsloMet - Informasjonsteknologi\ITPE3200_WebApplikasjoner\Nutri_REACT_2\api
+2024-12-02 10:25:48.230 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:25:48.262 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:25:48.265 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:25:48.279 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:25:48.367 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:25:48.417 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:25:48.417 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 131.1934ms
+2024-12-02 10:25:48.418 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:25:48.419 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:25:48.419 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:25:48.419 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:25:48.420 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 191.8744ms
+2024-12-02 10:25:48.425 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:25:48.425 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 6.2968ms
+2024-12-02 10:25:48.426 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:25:48.426 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 8.8476ms
+2024-12-02 10:25:48.431 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029//images/DbInit/broccoli.png - null null
+2024-12-02 10:25:48.431 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029//images/DbInit/chicken.png - null null
+2024-12-02 10:25:48.431 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029//images/DbInit/apple.png - null null
+2024-12-02 10:25:48.431 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029//images/DbInit/rice.png - null null
+2024-12-02 10:25:48.431 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029//images/DbInit/almonds.png - null null
+2024-12-02 10:25:48.496 +01:00 [INF] Sending file. Request path: '//images/DbInit/almonds.png'. Physical path: 'C:\Users\dorde\Documents\Gamle filer\OsloMet - Informasjonsteknologi\ITPE3200_WebApplikasjoner\Nutri_REACT_2\api\wwwroot\images\DbInit\almonds.png'
+2024-12-02 10:25:48.496 +01:00 [INF] Sending file. Request path: '//images/DbInit/chicken.png'. Physical path: 'C:\Users\dorde\Documents\Gamle filer\OsloMet - Informasjonsteknologi\ITPE3200_WebApplikasjoner\Nutri_REACT_2\api\wwwroot\images\DbInit\chicken.png'
+2024-12-02 10:25:48.496 +01:00 [INF] Sending file. Request path: '//images/DbInit/rice.png'. Physical path: 'C:\Users\dorde\Documents\Gamle filer\OsloMet - Informasjonsteknologi\ITPE3200_WebApplikasjoner\Nutri_REACT_2\api\wwwroot\images\DbInit\rice.png'
+2024-12-02 10:25:48.497 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029//images/DbInit/chicken.png - 200 443706 image/png 66.7259ms
+2024-12-02 10:25:48.497 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029//images/DbInit/rice.png - 200 419516 image/png 66.4321ms
+2024-12-02 10:25:48.498 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029//images/DbInit/almonds.png - 200 662097 image/png 66.3755ms
+2024-12-02 10:25:48.499 +01:00 [INF] Sending file. Request path: '//images/DbInit/apple.png'. Physical path: 'C:\Users\dorde\Documents\Gamle filer\OsloMet - Informasjonsteknologi\ITPE3200_WebApplikasjoner\Nutri_REACT_2\api\wwwroot\images\DbInit\apple.png'
+2024-12-02 10:25:48.499 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029//images/DbInit/apple.png - 200 725353 image/png 68.6798ms
+2024-12-02 10:25:48.570 +01:00 [INF] Sending file. Request path: '//images/DbInit/broccoli.png'. Physical path: 'C:\Users\dorde\Documents\Gamle filer\OsloMet - Informasjonsteknologi\ITPE3200_WebApplikasjoner\Nutri_REACT_2\api\wwwroot\images\DbInit\broccoli.png'
+2024-12-02 10:25:48.571 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029//images/DbInit/broccoli.png - 200 7587948 image/png 139.9027ms

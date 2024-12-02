@@ -1,0 +1,360 @@
+2024-12-02 10:03:37.316 +01:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-12-02 10:03:37.343 +01:00 [INF] Now listening on: https://localhost:7068
+2024-12-02 10:03:37.345 +01:00 [INF] Now listening on: http://localhost:5029
+2024-12-02 10:03:37.348 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-02 10:03:37.350 +01:00 [INF] Hosting environment: Development
+2024-12-02 10:03:37.350 +01:00 [INF] Content root path: C:\Users\dorde\Documents\Gamle filer\OsloMet - Informasjonsteknologi\ITPE3200_WebApplikasjoner\Nutri_REACT_2\api
+2024-12-02 10:04:11.267 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:04:11.288 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:04:11.289 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:04:11.299 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:04:11.378 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:04:11.413 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:04:11.414 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 109.2015ms
+2024-12-02 10:04:11.414 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:04:11.415 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:04:11.415 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:04:11.415 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:04:11.417 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 151.2738ms
+2024-12-02 10:04:11.422 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:04:11.422 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 6.4825ms
+2024-12-02 10:04:11.422 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:04:11.422 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 9.0503ms
+2024-12-02 10:05:34.027 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:05:34.028 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:05:34.028 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:05:34.028 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:05:34.071 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:05:34.071 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 42.8564ms
+2024-12-02 10:05:34.071 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:05:34.071 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 44.4425ms
+2024-12-02 10:05:41.070 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:05:41.071 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:05:41.071 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:05:41.071 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:05:41.075 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:05:41.075 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.501ms
+2024-12-02 10:05:41.076 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:05:41.076 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 5.1639ms
+2024-12-02 10:05:41.076 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:05:41.076 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:05:41.076 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:05:41.077 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:05:41.081 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:05:41.081 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.7856ms
+2024-12-02 10:05:41.081 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:05:41.082 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 5.4483ms
+2024-12-02 10:11:43.262 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:11:43.263 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:11:43.263 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:11:43.263 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:11:43.270 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:11:43.270 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 7.0253ms
+2024-12-02 10:11:43.270 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:11:43.270 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 7.9957ms
+2024-12-02 10:11:43.271 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:11:43.271 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:11:43.272 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:11:43.272 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:11:43.278 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:11:43.278 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 6.7779ms
+2024-12-02 10:11:43.279 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:11:43.279 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 7.3678ms
+2024-12-02 10:11:46.087 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:11:46.087 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:11:46.087 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:11:46.087 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:11:46.093 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:11:46.093 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 5.8684ms
+2024-12-02 10:11:46.093 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:11:46.093 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 6.7783ms
+2024-12-02 10:11:46.094 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:11:46.094 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:11:46.094 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:11:46.095 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:11:46.099 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:11:46.099 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.6857ms
+2024-12-02 10:11:46.099 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:11:46.099 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 5.3501ms
+2024-12-02 10:12:46.603 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:12:46.606 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:12:46.607 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:12:46.607 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:12:46.611 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:12:46.612 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.368ms
+2024-12-02 10:12:46.612 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:12:46.612 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 8.9276ms
+2024-12-02 10:12:46.612 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:12:46.612 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:12:46.612 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:12:46.613 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:12:46.616 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:12:46.616 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.4872ms
+2024-12-02 10:12:46.616 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:12:46.616 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 3.8788ms
+2024-12-02 10:14:17.607 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:14:17.610 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:14:17.610 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:14:17.614 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:14:17.614 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.3925ms
+2024-12-02 10:14:17.614 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:14:17.614 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 6.6941ms
+2024-12-02 10:15:16.018 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:15:16.020 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:15:16.021 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:16.021 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:15:16.025 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:15:16.025 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.6818ms
+2024-12-02 10:15:16.025 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:16.025 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 7.8646ms
+2024-12-02 10:15:17.010 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:15:17.010 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:15:17.011 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:17.011 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:15:17.016 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:15:17.017 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 6.0434ms
+2024-12-02 10:15:17.017 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:17.017 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 6.4957ms
+2024-12-02 10:15:27.733 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:15:27.733 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:15:27.733 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:27.733 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:15:27.738 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:15:27.739 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 5.1989ms
+2024-12-02 10:15:27.739 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:27.739 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 5.794ms
+2024-12-02 10:15:35.888 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:15:35.888 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:15:35.889 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:35.889 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:15:35.907 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:15:35.907 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 18.2381ms
+2024-12-02 10:15:35.907 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:35.908 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 19.4115ms
+2024-12-02 10:15:35.911 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:15:35.911 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:15:35.912 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:35.912 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:15:35.926 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:15:35.926 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 13.8703ms
+2024-12-02 10:15:35.926 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:15:35.926 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 15.2629ms
+2024-12-02 10:17:40.005 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:17:40.006 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:17:40.008 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:17:40.008 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:17:40.013 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:17:40.014 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.8948ms
+2024-12-02 10:17:40.014 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:17:40.014 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 8.5971ms
+2024-12-02 10:17:42.007 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:17:42.007 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:17:42.007 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:17:42.007 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:17:42.011 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:17:42.011 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.5146ms
+2024-12-02 10:17:42.011 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:17:42.011 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 3.9995ms
+2024-12-02 10:17:53.997 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:17:54.000 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:17:54.001 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:17:54.002 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:17:54.005 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:17:54.005 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.4103ms
+2024-12-02 10:17:54.005 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:17:54.005 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 7.716ms
+2024-12-02 10:20:01.757 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:01.758 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:01.758 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:01.758 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:01.764 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:01.764 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 6.2414ms
+2024-12-02 10:20:01.764 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:01.765 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 9.1787ms
+2024-12-02 10:20:02.853 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:02.854 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:02.854 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:02.854 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:02.859 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:02.859 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.9626ms
+2024-12-02 10:20:02.859 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:02.859 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 5.3579ms
+2024-12-02 10:20:07.849 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:07.850 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:07.850 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:07.850 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:07.857 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:07.857 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 7.4562ms
+2024-12-02 10:20:07.857 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:07.857 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 8.1075ms
+2024-12-02 10:20:11.972 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:11.972 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:11.972 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:11.972 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:11.976 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:11.977 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.2622ms
+2024-12-02 10:20:11.977 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:11.977 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 4.6561ms
+2024-12-02 10:20:16.940 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:16.940 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:16.940 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:16.940 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:16.944 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:16.944 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.1769ms
+2024-12-02 10:20:16.944 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:16.944 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 4.6981ms
+2024-12-02 10:20:19.385 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:19.385 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:19.385 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:19.385 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:19.389 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:19.389 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.7315ms
+2024-12-02 10:20:19.389 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:19.389 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 4.0522ms
+2024-12-02 10:20:21.597 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:21.597 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:21.597 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:21.597 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:21.602 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:21.602 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.9009ms
+2024-12-02 10:20:21.602 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:21.602 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 5.3359ms
+2024-12-02 10:20:23.542 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:23.542 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:23.542 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:23.542 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:23.548 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:23.548 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 5.4007ms
+2024-12-02 10:20:23.548 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:23.548 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 5.7535ms
+2024-12-02 10:20:40.452 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:40.452 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:40.453 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:40.453 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:40.457 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:40.457 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.6912ms
+2024-12-02 10:20:40.457 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:40.457 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 5.0831ms
+2024-12-02 10:20:49.861 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:49.861 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:49.861 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:49.861 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:49.865 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:49.865 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.9682ms
+2024-12-02 10:20:49.865 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:49.865 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 4.3197ms
+2024-12-02 10:20:53.768 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:53.768 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:53.768 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:53.768 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:53.771 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:53.772 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.4278ms
+2024-12-02 10:20:53.772 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:53.772 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 3.7475ms
+2024-12-02 10:20:56.614 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:56.614 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:56.614 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:56.614 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:56.618 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:56.618 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.6043ms
+2024-12-02 10:20:56.618 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:56.618 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 4.0108ms
+2024-12-02 10:20:59.418 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:20:59.420 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 10:20:59.420 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:20:59.420 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:59.422 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:20:59.424 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 5.5222ms
+2024-12-02 10:20:59.428 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
+2024-12-02 10:20:59.430 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:20:59.430 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 7.4704ms
+2024-12-02 10:20:59.430 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:20:59.430 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 11.9162ms
+2024-12-02 10:20:59.438 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 10:20:59.438 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 0.162ms
+2024-12-02 10:20:59.438 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
+2024-12-02 10:21:03.385 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:21:03.385 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:21:03.385 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:21:03.386 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:21:03.390 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:21:03.391 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.9891ms
+2024-12-02 10:21:03.391 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:21:03.391 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 5.2614ms
+2024-12-02 10:21:03.400 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 10:21:03.400 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 0.3026ms
+2024-12-02 10:21:03.400 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
+2024-12-02 10:21:35.675 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:21:35.678 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:21:35.679 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:21:35.679 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:21:35.682 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:21:35.682 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 3.3913ms
+2024-12-02 10:21:35.682 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:21:35.682 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 7.826ms
+2024-12-02 10:21:35.686 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:21:35.687 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:21:35.687 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:21:35.687 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:21:35.689 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 10:21:35.689 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 0.1622ms
+2024-12-02 10:21:35.689 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
+2024-12-02 10:21:35.693 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:21:35.694 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 6.6835ms
+2024-12-02 10:21:35.694 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:21:35.694 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 7.2789ms
+2024-12-02 10:23:21.785 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:23:21.785 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:23:21.785 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 10:23:21.786 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:23:21.787 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:23:21.787 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 1.4342ms
+2024-12-02 10:23:21.787 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
+2024-12-02 10:23:21.796 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:23:21.796 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 9.4028ms
+2024-12-02 10:23:21.796 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:23:21.796 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 11.4493ms
+2024-12-02 10:23:21.806 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 10:23:21.806 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 0.1268ms
+2024-12-02 10:23:21.806 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
+2024-12-02 10:23:30.866 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:23:30.866 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:23:30.867 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:23:30.867 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:23:30.873 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:23:30.873 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 6.4557ms
+2024-12-02 10:23:30.873 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:23:30.873 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 7.0817ms
+2024-12-02 10:23:30.874 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:23:30.874 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:23:30.874 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:23:30.874 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:23:30.879 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:23:30.879 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 4.5698ms
+2024-12-02 10:23:30.879 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:23:30.879 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 4.8849ms
+2024-12-02 10:23:30.961 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 10:23:30.961 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 0.114ms
+2024-12-02 10:23:30.961 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
+2024-12-02 10:24:52.566 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:24:52.566 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:24:52.566 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:24:52.566 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:24:52.574 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:24:52.574 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 8.3474ms
+2024-12-02 10:24:52.574 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:24:52.575 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 8.9725ms
+2024-12-02 10:24:52.583 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 10:24:52.584 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 0.2452ms
+2024-12-02 10:24:52.584 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
+2024-12-02 10:24:56.208 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - null null
+2024-12-02 10:24:56.208 +01:00 [INF] CORS policy execution successful.
+2024-12-02 10:24:56.209 +01:00 [INF] Executing endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:24:56.209 +01:00 [INF] Route matched with {action = "Entries", controller = "NutritionAPI"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Entries() on controller NutritionAPIController (api).
+2024-12-02 10:24:56.215 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Exam.Models.NutritionEntry, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Exam.DTOs.NutritionDto, api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-02 10:24:56.215 +01:00 [INF] Executed action NutritionAPIController.Entries (api) in 6.1195ms
+2024-12-02 10:24:56.215 +01:00 [INF] Executed endpoint 'NutritionAPIController.Entries (api)'
+2024-12-02 10:24:56.215 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/api/NutritionAPI/Entries - 200 null application/json; charset=utf-8 6.5267ms
+2024-12-02 10:24:56.228 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5029/ - null null
+2024-12-02 10:24:56.228 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5029/ - 404 0 null 0.1209ms
+2024-12-02 10:24:56.228 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5029/, Response status code: 404
