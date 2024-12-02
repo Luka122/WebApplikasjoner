@@ -31,11 +31,11 @@ namespace Exam.DAL
             }
         }
 
-        public async Task<RecipeEntry> GetRecipeByIdAsync(int id)
+        public async Task<RecipeEntry?> GetRecipeByIdAsync(int id)
         {
             try
             {
-                return await _context.Recipes.FindAsync(id);
+                return await _context!.Recipes.FindAsync(id);
             }
             catch (Exception ex)
             {
